@@ -1,3 +1,5 @@
+require 'pry'
+
 class TicTacToe
   def initialize
     @board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
@@ -65,6 +67,7 @@ class TicTacToe
     full? && !won? ? TRUE : false
   end
   def over?
+    binding.pry
     won? || full?
   end
   def winner
